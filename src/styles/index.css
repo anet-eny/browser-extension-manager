@@ -1,1 +1,106 @@
 @import "tailwindcss";
+
+@import "@fontsource/noto-sans";
+
+@theme {
+  /* FONT */
+  --font-noto: "Noto Sans", sans-serif;
+  --font-sans: var(--font-noto);
+
+  /* COLORS */
+  --color-neutral-0: oklch(0.9928 0.0025 228.78);
+  --color-neutral-100: oklch(0.9491 0 0);
+  --color-neutral-200: oklch(0.9095 0.029 259.59);
+  --color-neutral-300: oklch(0.8266 0 0);
+  --color-neutral-600: oklch(0.4619 0.0268 271.63);
+  --color-neutral-700: oklch(0.3358 0.0384 270.01);
+  --color-neutral-800: oklch(0.2671 0.0309 270.81);
+  --color-neutral-900: oklch(0.2179 0.0835 267.08);
+  --color-red-400: oklch(0.6696 0.1862 26.39);
+  --color-red-500: oklch(0.6122 0.1878 27.19);
+  --color-red-700: oklch(0.5358 0.1993 29.07);
+  --color-gradientlight-start: oklch(0.9588 0.0154 257.2);
+  --color-gradientlight-end: oklch(0.9779 0.0139 185.96);
+  --color-gradientdark-start: oklch(0.1459 0.0403 266.38);
+  --color-gradientdark-end: oklch(0.2179 0.0835 267.08);
+
+  /* TEXT PRESETS */
+  --text-preset-1: 2.125rem; /* 34px */
+  --text-preset-1--line-height: 1;
+  --text-preset-1--font-weight: 700;
+  --text-preset-1--letter-spacing: -1px;
+
+  --text-preset-2: 1.25rem; /* 20px */
+  --text-preset-2--line-height: 1.2;
+  --text-preset-2--font-weight: 700;
+  --text-preset-2--letter-spacing: -0.2px;
+
+  --text-preset-3: 1.25rem; /* 20px */
+  --text-preset-3--line-height: 1.4;
+  --text-preset-3--font-weight: 400;
+  --text-preset-3--letter-spacing: -0.3px;
+
+  --text-preset-4: 1.25rem; /* 20px */
+  --text-preset-4--line-height: 1.4;
+  --text-preset-4--font-weight: 500;
+  --text-preset-4--letter-spacing: -0.3px;
+
+  --text-preset-5: 1rem; /* 16px */
+  --text-preset-5--line-height: 1.4;
+  --text-preset-5--font-weight: 400;
+  --text-preset-5--letter-spacing: -0.5px;
+
+  --text-preset-6: 1rem; /* 16px */
+  --text-preset-6--line-height: 1.4;
+  --text-preset-6--font-weight: 500;
+  --text-preset-6--letter-spacing: -0.5px;
+}
+
+@utility text-preset-1 {
+  font-size: var(--text-preset-1);
+  line-height: var(--text-preset-1--line-height);
+  font-weight: var(--text-preset-1--font-weight);
+  letter-spacing: var(--text-preset-1--letter-spacing);
+}
+
+@utility text-preset-2 {
+  font-size: var(--text-preset-2);
+  line-height: var(--text-preset-2--line-height);
+  font-weight: var(--text-preset-2--font-weight);
+  letter-spacing: var(--text-preset-2--letter-spacing);
+}
+
+@utility text-preset-3 {
+  font-size: var(--text-preset-3);
+  line-height: var(--text-preset-3--line-height);
+  font-weight: var(--text-preset-3--font-weight);
+  letter-spacing: var(--text-preset-3--letter-spacing);
+}
+
+@utility text-preset-4 {
+  font-size: var(--text-preset-4);
+  line-height: var(--text-preset-4--line-height);
+  font-weight: var(--text-preset-4--font-weight);
+  letter-spacing: var(--text-preset-4--letter-spacing);
+}
+
+@utility text-preset-5 {
+  font-size: var(--text-preset-5);
+  line-height: var(--text-preset-5--line-height);
+  font-weight: var(--text-preset-5--font-weight);
+  letter-spacing: var(--text-preset-5--letter-spacing);
+}
+
+@utility text-preset-6 {
+  font-size: var(--text-preset-6);
+  line-height: var(--text-preset-6--line-height);
+  font-weight: var(--text-preset-6--font-weight);
+  letter-spacing: var(--text-preset-6--letter-spacing);
+}
+
+@layer base {
+  html,
+  body {
+    font-family: var(--font-sans);
+  }
+}
