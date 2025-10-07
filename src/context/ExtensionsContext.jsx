@@ -11,9 +11,23 @@ export function ExtensionsProvider({ children }) {
       return rawData;
     }
   });
+  const [filter, setFilter] = useState("all");
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem("ui.theme") || "light";
+  });
+
   useEffect(() => {
-    console.log("✅ [Mounted] items state initialized:", items);
-  }, []);
+    localStorage.setItem("extensions.items", JSON.stringify(items));
+  }, [items]);
+
+  useEffect(() => {
+    localStorage.setItem("ui.theme", theme);
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
 
   return (
     <ExtensionsContext.Provider value={{ items, setItems }}>
