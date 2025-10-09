@@ -2,6 +2,8 @@
 
 @import "@fontsource/noto-sans";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   /* FONT */
   --font-noto: "Noto Sans", sans-serif;
