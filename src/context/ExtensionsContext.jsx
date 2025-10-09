@@ -11,7 +11,7 @@ export function ExtensionsProvider({ children }) {
       return rawData;
     }
   });
-  const [filter, setFilter] = useState("all");
+  const [filter, setFilter] = useState("all"); // 'all', 'active', 'inactive'
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem("ui.theme") || "light";
   });
@@ -29,8 +29,31 @@ export function ExtensionsProvider({ children }) {
     }
   }, [theme]);
 
+  function toggleActive(id) {
+    setItems((prev) =>
+      prev.map((item) =>
+        item.id === id ? { ...item, isActive: !item.isActive } : item
+      )
+    );
+  }
+
+  function getFilteredItems() {
+    if (filter === "active") return items.filter((i) => i.isActive);
+    if (filter === "inactive") return items.filter((i) => !i.isActive);
+  }
+
   return (
-    <ExtensionsContext.Provider value={{ items, setItems }}>
+    <ExtensionsContext.Provider
+      value={{
+        items,
+        filter,
+        setFilter,
+        getFilteredItems,
+        toggleActive,
+        theme,
+        setTheme,
+      }}
+    >
       {children}
     </ExtensionsContext.Provider>
   );
