@@ -13,7 +13,7 @@ export default function Header() {
   }
 
   return (
-    <header className="bg-neutral-0 dark:bg-neutral-800 flex items-center px-3 py-2 mt-5 mx-4 rounded-xl shadow-md border border-[oklch(0.9095_0.029_259.59)]">
+    <header className="bg-neutral-0 dark:bg-neutral-800 flex items-center px-3 py-2 rounded-xl shadow-md border border-[oklch(0.9095_0.029_259.59)] dark:border-none">
       <div>
         <img src={theme === "light" ? logoLight : logoDark} alt="Logo" />
       </div>
