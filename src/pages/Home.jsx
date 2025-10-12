@@ -6,7 +6,7 @@ export default function Home() {
     <div className="min-h-screen pt-5 px-4 bg-gradient-to-b from-gradientlight-start to-gradientlight-end dark:from-gradientdark-start dark:to-gradientdark-end">
       <Header />
 
-      <main className="flex flex-col justify-center items-center my-10 gap-6">
+      <main className="flex flex-col justify-center items-center my-10 gap-6 dark:text-neutral-0">
         <h1 className="text-preset-1">Extensions List</h1>
         <nav className="flex gap-2.5">
           <FilterButton value="all">All</FilterButton>
