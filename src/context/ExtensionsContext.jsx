@@ -38,8 +38,10 @@ export function ExtensionsProvider({ children }) {
   }
 
   function getFilteredItems() {
+    if (!Array.isArray(items)) return [];
     if (filter === "active") return items.filter((i) => i.isActive);
     if (filter === "inactive") return items.filter((i) => !i.isActive);
+    return items;
   }
 
   return (

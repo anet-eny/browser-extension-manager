@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { ExtensionsContext } from "../context/ExtensionsContext";
 import Header from "../components/Header";
 import FilterButton from "../components/FilterButton";
