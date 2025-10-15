@@ -13,13 +13,15 @@ export default function Home() {
     <div className="max-w-5xl min-h-screen mx-auto pt-5 sm:pt-6 lg:pt-10 px-4 sm:px-8">
       <Header />
 
-      <main className="flex flex-col justify-center items-center my-10 gap-6 dark:text-neutral-0">
-        <h1 className="text-preset-1">Extensions List</h1>
-        <nav className="flex gap-2.5">
-          <FilterButton value="all">All</FilterButton>
-          <FilterButton value="active">Active</FilterButton>
-          <FilterButton value="inactive">Inactive</FilterButton>
-        </nav>
+      <main className="flex flex-col justify-center my-10 gap-6 sm:gap-8 dark:text-neutral-0">
+        <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-6">
+          <h1 className="text-preset-1">Extensions List</h1>
+          <nav className="flex gap-2.5">
+            <FilterButton value="all">All</FilterButton>
+            <FilterButton value="active">Active</FilterButton>
+            <FilterButton value="inactive">Inactive</FilterButton>
+          </nav>
+        </div>
 
         {items.length === 0 ? (
           <div>No extensions found</div>
