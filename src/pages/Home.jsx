@@ -5,7 +5,8 @@ import FilterButton from "../components/FilterButton";
 import ExtensionCard from "../components/ExtensionCard";
 
 export default function Home() {
-  const { getFilteredItems, toggleActive } = useContext(ExtensionsContext);
+  const { getFilteredItems, removeItem, toggleActive } =
+    useContext(ExtensionsContext);
   const items = getFilteredItems();
 
   return (
@@ -29,6 +30,7 @@ export default function Home() {
                 key={item.id}
                 item={item}
                 onToggle={toggleActive}
+                onRemove={removeItem}
               />
             ))
           )}

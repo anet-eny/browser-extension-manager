@@ -1,7 +1,7 @@
 import React from "react";
 import ToggleSwitch from "./ToggleSwitch";
 
-export default function ExtensionCard({ item, onToggle }) {
+export default function ExtensionCard({ item, onToggle, onRemove }) {
   return (
     <article className="flex flex-col p-5 bg-neutral-0 dark:bg-neutral-800 dark:border dark:border-neutral-600 rounded-[20px] min-h-[200px]">
       <div className="flex gap-4">
@@ -16,7 +16,10 @@ export default function ExtensionCard({ item, onToggle }) {
         </div>
       </div>
       <div className="flex justify-between items-center mt-auto">
-        <button className="px-4 py-2 text-preset-6 text-neutral-900 dark:text-neutral-0 border border-neutral-300 dark:border-neutral-600 rounded-full cursor-pointer">
+        <button
+          onClick={() => onRemove(item.id)}
+          className="px-4 py-2 text-preset-6 text-neutral-900 dark:text-neutral-0 border border-neutral-300 dark:border-neutral-600 rounded-full cursor-pointer"
+        >
           Remove
         </button>
 

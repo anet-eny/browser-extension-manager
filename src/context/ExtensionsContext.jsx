@@ -37,6 +37,10 @@ export function ExtensionsProvider({ children }) {
     );
   }
 
+  function removeItem(id) {
+    setItems((prev) => prev.filter((it) => it.id !== id));
+  }
+
   function getFilteredItems() {
     if (!Array.isArray(items)) return [];
     if (filter === "active") return items.filter((i) => i.isActive);
@@ -52,6 +56,7 @@ export function ExtensionsProvider({ children }) {
         setFilter,
         getFilteredItems,
         toggleActive,
+        removeItem,
         theme,
         setTheme,
       }}
