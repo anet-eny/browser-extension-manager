@@ -1,4 +1,3 @@
-import React from "react";
 import { ExtensionsProvider } from "./context/ExtensionsContext";
 import Home from "./pages/Home";
 

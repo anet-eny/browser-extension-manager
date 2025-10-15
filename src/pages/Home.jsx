@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { ExtensionsContext } from "../context/ExtensionsContext";
 import Header from "../components/Header";
 import FilterButton from "../components/FilterButton";
@@ -21,20 +21,20 @@ export default function Home() {
           <FilterButton value="inactive">Inactive</FilterButton>
         </nav>
 
-        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-          {items.length === 0 ? (
-            <div>No extensions found</div>
-          ) : (
-            items.map((item) => (
+        {items.length === 0 ? (
+          <div>No extensions found</div>
+        ) : (
+          <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {items.map((item) => (
               <ExtensionCard
                 key={item.id}
                 item={item}
                 onToggle={toggleActive}
                 onRemove={removeItem}
               />
-            ))
-          )}
-        </section>
+            ))}
+          </section>
+        )}
       </main>
     </div>
   );

@@ -1,4 +1,3 @@
-import React from "react";
 import ToggleSwitch from "./ToggleSwitch";
 
 export default function ExtensionCard({ item, onToggle, onRemove }) {

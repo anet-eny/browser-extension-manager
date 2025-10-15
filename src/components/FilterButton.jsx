@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { ExtensionsContext } from "../context/ExtensionsContext";
 
 export default function FilterButton({ value, children }) {

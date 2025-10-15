@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { ExtensionsContext } from "../context/ExtensionsContext";
 import iconMoon from "../assets/icon-moon.svg";
 import iconSun from "../assets/icon-sun.svg";
