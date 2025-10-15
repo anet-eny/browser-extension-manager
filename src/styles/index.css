@@ -103,6 +103,6 @@
 @layer base {
   html,
   body {
-    font-family: var(--font-sans);
+    @apply bg-gradient-to-b from-gradientlight-start to-gradientlight-end dark:from-gradientdark-start dark:to-gradientdark-end font-sans;
   }
 }
