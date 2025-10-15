@@ -3,16 +3,20 @@ import ToggleSwitch from "./ToggleSwitch";
 
 export default function ExtensionCard({ item, onToggle }) {
   return (
-    <article className="p-5 bg-neutral-0 rounded-[20px] min-h-[200px]">
+    <article className="flex flex-col p-5 bg-neutral-0 dark:bg-neutral-800 dark:border dark:border-neutral-600 rounded-[20px] min-h-[200px]">
       <div className="flex gap-4">
         <img src={item.logo} alt={`${item.name} icon`} />
         <div>
-          <h2 className="text-preset-2 text-neutral-900">{item.name}</h2>
-          <p className="text-preset-5 text-neutral-600">{item.description}</p>
+          <h2 className="text-preset-2 text-neutral-900 dark:text-neutral-0 mb-2">
+            {item.name}
+          </h2>
+          <p className="text-preset-5 text-neutral-600 dark:text-neutral-300">
+            {item.description}
+          </p>
         </div>
       </div>
-      <div className="flex justify-between items-center mt-6">
-        <button className="px-4 py-2 text-preset-6 text-neutral-900 border border-neutral-300 rounded-full cursor-pointer">
+      <div className="flex justify-between items-center mt-auto">
+        <button className="px-4 py-2 text-preset-6 text-neutral-900 dark:text-neutral-0 border border-neutral-300 dark:border-neutral-600 rounded-full cursor-pointer">
           Remove
         </button>
 
