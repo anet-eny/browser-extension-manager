@@ -17,7 +17,7 @@ export default function ExtensionCard({ item, onToggle, onRemove }) {
       <div className="flex justify-between items-center mt-auto">
         <button
           onClick={() => onRemove(item.id)}
-          className="px-4 py-2 text-preset-6 text-neutral-900 dark:text-neutral-0 border border-neutral-300 dark:border-neutral-600 rounded-full cursor-pointer"
+          className="px-4 py-2 text-preset-6 text-neutral-900 dark:text-neutral-0 border border-neutral-300 dark:border-neutral-600 hover:text-neutral-0 hover:bg-red-700 hover:border-red-700 hover:dark:text-neutral-900 hover:dark:bg-red-400 hover:dark:border-red-400 rounded-full focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2 cursor-pointer"
         >
           Remove
         </button>

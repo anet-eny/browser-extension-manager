@@ -19,10 +19,10 @@ export default function Header() {
       </div>
       <button
         onClick={toggleTheme}
-        className="bg-neutral-100 dark:bg-neutral-700 w-[50px] h-[50px] flex justify-center items-center rounded-xl ml-auto"
+        className="bg-neutral-100 dark:bg-neutral-700 hover:bg-neutral-300 hover:dark:bg-neutral-600 w-[50px] h-[50px] flex justify-center items-center rounded-xl ml-auto focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2 cursor-pointer"
         aria-label="Toggle theme"
       >
-        <img src={theme === "light" ? iconMoon : iconSun} alt="Dark mode" />
+        <img src={theme === "light" ? iconMoon : iconSun} alt="Switch theme" />
       </button>
     </header>
   );
