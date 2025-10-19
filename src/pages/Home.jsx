@@ -3,9 +3,10 @@ import { ExtensionsContext } from "../context/ExtensionsContext";
 import Header from "../components/Header";
 import FilterButton from "../components/FilterButton";
 import ExtensionCard from "../components/ExtensionCard";
+import Button from "../components/Button";
 
 export default function Home() {
-  const { getFilteredItems, removeItem, toggleActive } =
+  const { getFilteredItems, removeItem, toggleActive, resetToDefaults } =
     useContext(ExtensionsContext);
   const items = getFilteredItems();
 
@@ -37,6 +38,9 @@ export default function Home() {
             ))}
           </section>
         )}
+        <Button onClick={resetToDefaults} className="mx-auto">
+          Reset
+        </Button>
       </main>
     </div>
   );

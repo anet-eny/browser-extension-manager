@@ -48,6 +48,11 @@ export function ExtensionsProvider({ children }) {
     return items;
   }
 
+  function resetToDefaults() {
+    setItems(rawData);
+    localStorage.removeItem("extensions.items");
+  }
+
   return (
     <ExtensionsContext.Provider
       value={{
@@ -59,6 +64,7 @@ export function ExtensionsProvider({ children }) {
         removeItem,
         theme,
         setTheme,
+        resetToDefaults,
       }}
     >
       {children}
