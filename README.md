@@ -10,8 +10,6 @@ This project is a solution to the **Browser Extension Manager UI challenge** on 
 - **Filtering Logic**: Users can toggle between _All_, _Active_, and _Inactive_ extensions using a simple filter bar.
 - **State Persistence**: Extension data and UI theme are persisted with `localStorage`, so user preferences remain after reload.
 - **Theme Toggle**: Light and dark mode implemented using Tailwind’s `data-theme` variant (`[data-theme=dark]`), fully synced with `localStorage`.
-- **Responsive Grid Layout**: Tailwind’s grid utilities ensure clean alignment and scaling across breakpoints.
-- **Modular Components**: Clear React structure with reusable components like `Header`, `FilterBar`, and `ExtensionCard`.
 
 ## Key Learnings
 
@@ -19,3 +17,7 @@ This project is a solution to the **Browser Extension Manager UI challenge** on 
 - **State Management Basics**: Practiced updating arrays with immutable logic (`map`, `filter`) to toggle and remove items.
 - **Persistent State**: Used `localStorage` inside `useEffect` to preserve user settings and extension data.
 - **Theme Management in Tailwind 4**: Applied Tailwind’s modern `@custom-variant dark` syntax for theme toggling.
+
+## View Project
+
+https://anet-eny.github.io/browser-extension-manager/

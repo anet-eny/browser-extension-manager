@@ -1,10 +1,12 @@
 import ToggleSwitch from "./ToggleSwitch";
 
 export default function ExtensionCard({ item, onToggle, onRemove }) {
+  const logoUrl = new URL(`../assets/${item.logo}`, import.meta.url).href;
+
   return (
     <article className="flex flex-col p-5 bg-neutral-0 dark:bg-neutral-800 dark:border dark:border-neutral-600 rounded-[20px] min-h-[200px]">
       <div className="flex gap-4">
-        <img src={item.logo} alt={`${item.name} icon`} />
+        <img src={logoUrl} alt={`${item.name} icon`} />
         <div>
           <h2 className="text-preset-2 text-neutral-900 dark:text-neutral-0 mb-2">
             {item.name}
